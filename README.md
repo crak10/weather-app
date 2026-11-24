@@ -27,4 +27,7 @@ Puedes ver el proyecto funcionando aquí: [ENLACE_A_TU_GITHUB_PAGES]
 
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/TU_USUARIO/TU_REPOSITORIO.git
+   git clone https://github.com/crak10/weather-app
+
+---
+*Desarrollado por Luighy (Crak_10) como proyecto de portafolio.*

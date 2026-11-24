@@ -1,0 +1,188 @@
+/* =========================================================
+   WEATHER APP - HOJA DE ESTILOS PRINCIPAL
+   ========================================================= */
+
+:root {
+  --color-primario: #4facfe;
+  --color-secundario: #00f2fe;
+  --color-texto-claro: #ffffff;
+  --color-texto-suave: rgba(255, 255, 255, 0.75);
+  --color-glass: rgba(255, 255, 255, 0.15);
+  --color-glass-borde: rgba(255, 255, 255, 0.30);
+  --sombra-suave: 0 8px 32px rgba(0, 0, 0, 0.25);
+  --radio-tarjeta: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  color: var(--color-texto-claro);
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #4facfe 100%);
+  background-size: 200% 200%;
+  animation: fondoAnimado 15s ease infinite;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes fondoAnimado {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.weather-app {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.app-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 576px) {
+  .app-title { font-size: 2.4rem; }
+}
+
+.search-box .input-group {
+  border-radius: 50px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.95);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-box .input-group:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.search-box .form-control,
+.search-box .input-group-text {
+  background-color: transparent;
+  box-shadow: none;
+  font-size: 1rem;
+}
+
+.search-box .btn-primary {
+  background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+  border: none;
+  font-weight: 600;
+  transition: filter 0.2s ease;
+}
+
+.search-box .btn-primary:hover {
+  filter: brightness(1.1);
+}
+
+.loader-container {
+  animation: aparecer 0.3s ease;
+}
+
+#error-message {
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(220, 53, 69, 0.85);
+  color: #fff;
+  backdrop-filter: blur(8px);
+  animation: aparecer 0.3s ease;
+}
+
+.weather-card {
+  background: var(--color-glass);
+  border: 1px solid var(--color-glass-borde);
+  border-radius: var(--radio-tarjeta);
+  box-shadow: var(--sombra-suave);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 1.75rem 1.25rem;
+  animation: aparecer 0.4s ease;
+}
+
+.weather-card__city {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.weather-card__country {
+  font-size: 0.95rem;
+  color: var(--color-texto-suave);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.weather-card__icon {
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.35));
+}
+
+.weather-card__temp {
+  line-height: 1;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.weather-card__unit {
+  vertical-align: super;
+  color: var(--color-texto-suave);
+}
+
+.weather-card__description {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--color-texto-claro);
+  letter-spacing: 0.5px;
+}
+
+.weather-card__details {
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.weather-detail {
+  flex: 1;
+}
+
+.weather-detail__icon {
+  color: var(--color-secundario);
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+}
+
+.weather-detail__label {
+  font-size: 0.8rem;
+  color: var(--color-texto-suave);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 0.5rem;
+}
+
+.weather-detail__value {
+  font-size: 1.1rem;
+  margin-top: 0.15rem;
+}
+
+.app-footer a {
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.4);
+  transition: color 0.2s ease;
+}
+
+.app-footer a:hover {
+  color: #fff !important;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (min-width: 576px) {
+  .weather-card { padding: 2.25rem 2rem; }
+  .weather-card__city { font-size: 2rem; }
+}

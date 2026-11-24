@@ -2,9 +2,6 @@
 
 Una aplicación web moderna y minimalista para consultar el clima actual de cualquier ciudad del mundo. Este proyecto fue desarrollado como parte de mi portafolio para demostrar habilidades en el desarrollo frontend utilizando tecnologías web nativas.
 
-## 🚀 Demo en vivo
-Puedes ver el proyecto funcionando aquí: [ENLACE_A_TU_GITHUB_PAGES]
-
 ## 🛠️ Tecnologías Utilizadas
 *   **HTML5**: Estructura semántica.
 *   **CSS3**: Diseño responsivo (Mobile-first), variables CSS, animaciones y efecto **Glassmorphism**.
